@@ -25,13 +25,15 @@
                 <li><a href="contact.html">Contact us</a></li> 
             </ul>
         </nav>
-        <form action="ReportServlet" method="POST">
-            Name:  <input type="text" name="username"/><br/>
-            Contact Information (email or phone number):   <input type="text" name="contact"/><br/>
-            <label for "issue_box">Please describe your issue or feedback: </label><br/>
-            <textarea is="issue_box" name="issue_box" rows="4" cols="50"></textarea></br>
-            <th><input type="submit" value="Submit" /></th>
-		</form>
+        <div class = "formContainer">
+	        <form action="ReportServlet" method="POST">
+	            Name:  <input type="text" name="username" class="formInput"/><br/>
+	            Contact Information (email or phone number):   <input type="text" name="contact" class="formInput"/><br/>
+	            <label for "issue_box" class="formInput">Please describe your issue or feedback: </label><br/>
+	            <textarea id="issue_box" name="issue_box" class="formInput" rows="4" cols="50"></textarea></br>
+	            <th><input type="submit" value="Submit" /></th>
+			</form>
+		</div>
     </body>
 </body>
 </html>

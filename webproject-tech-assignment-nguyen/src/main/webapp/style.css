@@ -27,7 +27,6 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
 }
 
 nav li {
@@ -54,11 +53,13 @@ nav a:hover {
     background-color: #630476;
 }
 
-
 .logo-container{
         display: flex;
         max-width: 1500px;
         width: 90%;
         align-items: center;
-        
+}
+
+input.formInput {
+    padding: 10px;
 }

@@ -41,11 +41,21 @@ public class ReserveServlet extends HttpServlet {
 	            "transitional//en\">\n"; //
 		out.println(docType + //
 	            "<html>\n" + //
-	            "<head></head>\n" + //
+	            "<head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">" + //  
 	            "<body bgcolor=\"white\">\n" + //
 	            "<link href=\"https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@400;600&display=swap\" rel=\"stylesheet\">"//
-	            +"<link rel=\"stylesheet\" href=\"style.css\">");
-		
+	            +"<link rel=\"stylesheet\" href=\"style.css\"></head>");
+		out.println("<body><header>" + //
+				"<div class=\"logo-container\" style=\"display:flex\">" + //
+				"<img src=\"logo-company.png\" alt=\"our company logo\" width=\"100px\" height = \"100px\">" + //
+				"<h1> Laptop Pool Checkout System </h1>" + //
+				"</div> </header>");
+		out.println("<body> <nav> <ul>" + //
+				"<li><a href=\"home.html\">Home</a></li>" + //
+                "<li><a href=\"reserve.html\">Reserve a Laptop</a></li>" + //
+                "<li><a href=\"issues.html\">Report Issue</a></li>" + //
+                "<li><a href=\"contact.html\">Contact us</a></li>" + // 
+				"</ul> </nav>");
 		PreparedStatement preparedStatement = null;
 		PreparedStatement preparedStatement2 = null;
 		PreparedStatement preparedStatement3 = null;
@@ -62,9 +72,8 @@ public class ReserveServlet extends HttpServlet {
 			
 			if (rs.next()) {
 				String laptop_name = rs.getString("laptop_name").trim();
-				out.println(laptop_name + " has been assigned to you. Please come to Room 123 and grab " + laptop_name + //
-						" from the laptop cabinet and return it to the designated tray by 4pm " + date_end + //
-						"</body></html>");
+				out.println("<p><b>Successful reservation!</b></p> <p>" + laptop_name + " has been assigned to you. Please come to Room 123 and grab " + //
+						laptop_name + " from the laptop cabinet and return it to the designated tray by <b>4pm " + date_end + "</b>.</p>");
 				String updateSQL = "UPDATE laptops SET AVAILABLE = 0 WHERE laptop_name LIKE ?";
 				preparedStatement2 = connection.prepareStatement(updateSQL);
 				preparedStatement2.setString(1,laptop_name);
@@ -80,9 +89,10 @@ public class ReserveServlet extends HttpServlet {
 				preparedStatement3.setString(4, dateFormat.format(date));
 				preparedStatement3.setString(5, date_end);
 				preparedStatement3.execute();
+				out.println("<p>When return the laptop, you do not need to check it into the system. The pool is inventoried every day and the laptop status will be updated by the system admins.</p> <p> Thank you!</p></body></html>");
 
 			} else {
-				out.println("<p style='color:red'>Sorry, there is no laptop available at this time. Please leave a feedback or contact us here.<a href='contact.html'>here.</a></p>");
+				out.println("<p style='color:red'>Sorry, there is no laptop available at this time. Please leave a feedback or contact us <a href='contact.html'>here.</a></p>");
 			}
 			rs.close();
 			preparedStatement.close();

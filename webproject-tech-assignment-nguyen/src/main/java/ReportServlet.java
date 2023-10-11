@@ -44,14 +44,27 @@ public class ReportServlet extends HttpServlet {
 		// Set response content type 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		String title = "Thank you for your feedback!";
-		String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";
+		String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + //
+	            "transitional//en\">\n"; //
 		out.println(docType + //
-	        "<html>\n" + //
-	        "<head><title>" + title + "</title></head>\n" + //
-	        "<body bgcolor=\"#f0f0f0\">\n" + //
-	        "<h2 align=\"center\">" + title + "</h2>\n" + //
-	        "<p> Your feedback has been recorded. Thank you for your time.<p></br>" + //
+	            "<html>\n" + //
+	            "<head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">" + //  
+	            "<body bgcolor=\"white\">\n" + //
+	            "<link href=\"https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@400;600&display=swap\" rel=\"stylesheet\">"//
+	            +"<link rel=\"stylesheet\" href=\"style.css\"></head>");
+		out.println("<body><header>" + //
+				"<div class=\"logo-container\" style=\"display:flex\">" + //
+				"<img src=\"logo-company.png\" alt=\"our company logo\" width=\"100px\" height = \"100px\">" + //
+				"<h1> Laptop Pool Checkout System </h1>" + //
+				"</div> </header>");
+		out.println("<body> <nav> <ul>" + //
+				"<li><a href=\"home.html\">Home</a></li>" + //
+                "<li><a href=\"reserve.html\">Reserve a Laptop</a></li>" + //
+                "<li><a href=\"issues.html\">Report Issue</a></li>" + //
+                "<li><a href=\"contact.html\">Contact us</a></li>" + // 
+				"</ul> </nav>");
+		
+		out.println("<p> Thank you for your feedback! We will work on it and reach out in 2 business days.<p></br>" + //
 	        "<p> Go back to <a href=\"home.html\">Home Page</a> <p>");
 
 		out.println("</body></html>");	
