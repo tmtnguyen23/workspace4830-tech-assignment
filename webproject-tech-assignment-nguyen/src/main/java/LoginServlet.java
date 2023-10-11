@@ -54,7 +54,7 @@ public class LoginServlet extends HttpServlet {
 			ResultSet rs = preparedStatement.executeQuery();
 			
 			if (rs.next()) {
-				response.sendRedirect("home.html");
+				response.sendRedirect("index.html");
 			} else {
 				out.println("<p style='color:red'>Wrong username and password. Please try again <a href='login.html'>here.</a></p>");
 			}

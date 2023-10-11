@@ -58,7 +58,7 @@ public class ReportServlet extends HttpServlet {
 				"<h1> Laptop Pool Checkout System </h1>" + //
 				"</div> </header>");
 		out.println("<body> <nav> <ul>" + //
-				"<li><a href=\"home.html\">Home</a></li>" + //
+				"<li><a href=\"index.html\">Home</a></li>" + //
                 "<li><a href=\"reserve.html\">Reserve a Laptop</a></li>" + //
                 "<li><a href=\"issues.html\">Report Issue</a></li>" + //
                 "<li><a href=\"contact.html\">Contact us</a></li>" + // 
