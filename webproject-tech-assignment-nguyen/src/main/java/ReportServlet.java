@@ -65,7 +65,7 @@ public class ReportServlet extends HttpServlet {
 				"</ul> </nav>");
 		
 		out.println("<p> Thank you for your feedback! We will work on it and reach out in 2 business days.<p></br>" + //
-	        "<p> Go back to <a href=\"home.html\">Home Page</a> <p>");
+	        "<p> Go back to <a href=\"index.html\">Home Page</a> <p>");
 
 		out.println("</body></html>");	
 	}
