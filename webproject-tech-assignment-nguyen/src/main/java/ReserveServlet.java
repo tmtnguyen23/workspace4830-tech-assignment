@@ -89,7 +89,7 @@ public class ReserveServlet extends HttpServlet {
 				preparedStatement3.setString(4, dateFormat.format(date));
 				preparedStatement3.setString(5, date_end);
 				preparedStatement3.execute();
-				out.println("<p>When return the laptop, you do not need to check it into the system. The pool is inventoried every day and the laptop status will be updated by the system admins.</p> <p> Thank you!</p></body></html>");
+				out.println("<p>When you return the laptop, you do not need to check it into the system. The pool is inventoried every day and the laptop status will be updated by the system admins.</p> <p> Thank you!</p></body></html>");
 
 			} else {
 				out.println("<p style='color:red'>Sorry, there is no laptop available at this time. Please leave a feedback or contact us <a href='contact.html'>here.</a></p>");
