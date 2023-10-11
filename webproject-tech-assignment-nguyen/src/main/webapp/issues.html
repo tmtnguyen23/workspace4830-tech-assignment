@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container" style="display:flex">
+            <img src="logo-company.png" alt="our company logo" width="100px" height = "100px">
+            <h1> Laptop Pool Checkout System </h1>
+        </div>
+    </header>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="reserve.html">Reserve a Laptop</a></li>
+                <li><a href="issues.html">Report Issue</a></li>
+                <li><a href="contact.html">Contact us</a></li> 
+            </ul>
+        </nav>
+        <form action="ReportServlet" method="POST">
+            Name:  <input type="text" name="username"/><br/>
+            Contact Information (email or phone number):   <input type="text" name="contact"/><br/>
+            <label for "issue_box">Please describe your issue or feedback: </label><br/>
+            <textarea is="issue_box" name="issue_box" rows="4" cols="50"></textarea></br>
+            <th><input type="submit" value="Submit" /></th>
+		</form>
+    </body>
+</body>
+</html>

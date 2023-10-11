@@ -1,0 +1,64 @@
+/* Global style 
+-----------------------*/
+html {
+    box-sizing: border-box; 
+}
+
+body {
+    color: #320E3B;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 1;
+}
+
+h1 {
+    display: inline;
+    padding-left:10px;
+}
+
+nav {
+    border-bottom: 3px solid #530462;
+    border-top: 3px solid #530462;
+    margin: 1rem auto;
+    background-color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    display:block;
+    color: #480355;
+    text-decoration:none;
+    font-size:1.5rem;
+    font-weight: 600;
+
+}
+
+nav a:focus {
+    background-color: #E5D2EE;
+    color:black;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #630476;
+}
+
+
+.logo-container{
+        display: flex;
+        max-width: 1500px;
+        width: 90%;
+        align-items: center;
+        
+}
